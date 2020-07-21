@@ -1,19 +1,19 @@
 package com.sandeep.mani.users;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-public abstract class User {
+public class User {
 	private String name;
 	private String address;
 	private String email;
-	private Date dob;
+	private LocalDate dob;
 	private String gender;
 	private String contact;
 	private String userId;
 	private String userPwd;
 	public User() {	}
 	
-	public User(String name, String address, String email, Date dob, String gender, String contact, String userId,
+	public User(String name, String address, String email, LocalDate dob, String gender, String contact, String userId,
 			String userPwd) {
 		super();
 		this.name = name;
@@ -44,10 +44,10 @@ public abstract class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Date getDob() {
+	public LocalDate getDob() {
 		return dob;
 	}
-	public void setDob(Date dob) {
+	public void setDob(LocalDate dob) {
 		this.dob = dob;
 	}
 	public String getGender() {
