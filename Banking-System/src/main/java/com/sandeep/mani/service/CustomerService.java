@@ -1,10 +1,13 @@
-package com.sandeep.mani.customers;
+package com.sandeep.mani.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.sandeep.mani.model.Customer;
+import com.sandeep.mani.repository.CustomerRepository;
 
 @Service
 public class CustomerService {

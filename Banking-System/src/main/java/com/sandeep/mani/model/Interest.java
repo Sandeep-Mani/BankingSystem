@@ -1,4 +1,4 @@
-package com.sandeep.mani.interest;
+package com.sandeep.mani.model;
 
 import java.util.UUID;
 

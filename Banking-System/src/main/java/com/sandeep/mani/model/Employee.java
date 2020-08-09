@@ -1,24 +1,36 @@
-package com.sandeep.mani.employee;
+package com.sandeep.mani.model;
 
 import java.sql.Date;
 import java.util.UUID;
 
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+
 public abstract class Employee {
-	private UUID id;
+	private String id;
 	private String email;
 	private String nationality;
 	private String userName;
 	private String password;
-	private String name;
 	private String salary;
 	private Date dob;
 	private String contact;
 	private String gender;
-	private String address;
-	public UUID getId() {
+	
+	@ManyToOne
+	private Address address;
+	
+	@OneToOne
+	private Name name;
+	
+	public Employee() {
+		super();
+		this.id = UUID.randomUUID().toString();
+	}
+	public String getId() {
 		return id;
 	}
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getEmail() {
@@ -45,10 +57,10 @@ public abstract class Employee {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getName() {
+	public Name getName() {
 		return name;
 	}
-	public void setName(String name) {
+	public void setName(Name name) {
 		this.name = name;
 	}
 	public String getSalary() {
@@ -75,10 +87,10 @@ public abstract class Employee {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getAddress() {
+	public Address getAddress() {
 		return address;
 	}
-	public void setAddress(String address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}	
 }

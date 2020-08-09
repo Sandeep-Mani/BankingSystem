@@ -1,10 +1,13 @@
-package com.sandeep.mani.account;
+package com.sandeep.mani.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.sandeep.mani.model.Account;
+import com.sandeep.mani.repository.AccountRepository;
 
 @Service
 public class AccountService {

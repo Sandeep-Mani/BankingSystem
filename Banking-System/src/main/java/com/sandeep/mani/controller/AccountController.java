@@ -1,4 +1,4 @@
-package com.sandeep.mani.account;
+package com.sandeep.mani.controller;
 
 import java.util.List;
 
@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sandeep.mani.customers.CustomerService;
+import com.sandeep.mani.model.Account;
+import com.sandeep.mani.service.AccountService;
+import com.sandeep.mani.service.CustomerService;
 
 @RestController
 public class AccountController {

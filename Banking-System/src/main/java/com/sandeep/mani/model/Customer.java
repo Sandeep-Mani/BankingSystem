@@ -1,17 +1,15 @@
-package com.sandeep.mani.customers;
+package com.sandeep.mani.model;
 
 import java.sql.Date;
 import java.util.UUID;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Customer {
 	@Id
-	@GeneratedValue
-	private UUID customerId;
+	private String customerId;
 	private String customerPwd;
 	private String name;
 	private String address;
@@ -21,20 +19,21 @@ public class Customer {
 	private String contact;
 
 	public Customer() {
+		this.customerId = UUID.randomUUID().toString();
 	}
 
-	public Customer(String name, String address, String email, Date dob, String gender, String contact, UUID customerId,
-			String customerPwd) {
-		super();
-		this.name = name;
-		this.address = address;
-		this.email = email;
-		this.dob = dob;
-		this.gender = gender;
-		this.contact = contact;
-		this.customerId = customerId;
-		this.customerPwd = customerPwd;
-	}
+//	public Customer(String name, String address, String email, Date dob, String gender, String contact, String customerId,
+//			String customerPwd) {
+//		super();
+//		this.name = name;
+//		this.address = address;
+//		this.email = email;
+//		this.dob = dob;
+//		this.gender = gender;
+//		this.contact = contact;
+//		this.customerId = UUID.randomUUID().toString();
+//		this.customerPwd = customerPwd;
+//	}
 
 	public String getName() {
 		return name;
@@ -76,11 +75,11 @@ public class Customer {
 		this.contact = contact;
 	}
 
-	public UUID getCustomerId() {
+	public String getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(UUID customerId) {
+	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
 

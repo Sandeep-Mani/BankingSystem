@@ -1,6 +1,15 @@
-package com.sandeep.mani.identities;
+package com.sandeep.mani.model;
 
+import java.util.UUID;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Address {
+	
+	@Id
+	private String id;
 	private String doorNo;
 	private String street;
 	private String city;
@@ -8,14 +17,7 @@ public class Address {
 	private int pin;
 	public Address() {
 		super();
-	}
-	public Address(String doorNo, String street, String city, String state, int pin) {
-		super();
-		this.doorNo = doorNo;
-		this.street = street;
-		this.city = city;
-		this.state = state;
-		this.pin = pin;
+		this.id = UUID.randomUUID().toString();
 	}
 	public String getDoorNo() {
 		return doorNo;
@@ -46,5 +48,11 @@ public class Address {
 	}
 	public void setPin(int pin) {
 		this.pin = pin;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}	
 }

@@ -1,13 +1,12 @@
-package com.sandeep.mani.account;
+package com.sandeep.mani.model;
 
 import java.math.BigInteger;
 import java.sql.Date;
+import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-
-import com.sandeep.mani.customers.Customer;
 
 @Entity
 public class Account {
@@ -25,18 +24,7 @@ public class Account {
 	
 	public Account() {
 		super();
-	}
-	
-	public Account(String accNo, String interestId, BigInteger balance, float interestRate,
-			Date openDate, double interestAmount, String accountType) {
-		super();
-		this.accNo = accNo;
-		this.interestId = interestId;
-		this.balance = balance;
-		this.interestRate = interestRate;
-		this.openDate = openDate;
-		this.interestAmount = interestAmount;
-		this.accountType = accountType;
+		this.accNo = UUID.randomUUID().toString();
 	}
 
 	public String getAccNo() {

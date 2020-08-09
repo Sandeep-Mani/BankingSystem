@@ -1,4 +1,4 @@
-package com.sandeep.mani.transaction;
+package com.sandeep.mani.model;
 
 import java.sql.Timestamp;
 import java.util.UUID;

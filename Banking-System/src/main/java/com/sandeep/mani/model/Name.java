@@ -1,6 +1,13 @@
-package com.sandeep.mani.identities;
+package com.sandeep.mani.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Name {
+	
+	@Id
+	private String id;
 	private String first;
 	private String middle;
 	private String last;
